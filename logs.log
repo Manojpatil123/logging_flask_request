@@ -1,0 +1,52 @@
+2023-02-22 19:05:34 INFO werkzeug MainThread : [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2023-02-22 19:05:34 INFO werkzeug MainThread : [33mPress CTRL+C to quit[0m
+[2023-Feb-22 19:05] 127.0.0.1 POST http /api? 200 OK
+2023-02-22 19:05:37 ERROR __main__ Thread-1 : [2023-Feb-22 19:05] 127.0.0.1 POST http /api? 200 OK
+2023-02-22 19:05:37 INFO werkzeug Thread-1 : 127.0.0.1 - - [22/Feb/2023 19:05:37] "POST /api HTTP/1.1" 200 -
+[2023-Feb-22 19:09] 127.0.0.1 POST http /api? 200 OK
+[2023-Feb-22 19:09] 127.0.0.1 POST http /api/? 404 NOT FOUND
+[2023-Feb-22 19:13] 127.0.0.1 POST http /api? 200 OK
+[2023-Feb-22 19:13] 127.0.0.1 POST http /api/? 5xx INTERNAL SERVER ERROR
+Traceback (most recent call last):
+  File "C:\Users\1004646\Anaconda3\lib\site-packages\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\1004646\Anaconda3\lib\site-packages\flask\app.py", line 1785, in dispatch_request
+    self.raise_routing_exception(req)
+  File "C:\Users\1004646\Anaconda3\lib\site-packages\flask\app.py", line 1767, in raise_routing_exception
+    raise request.routing_exception  # type: ignore
+  File "C:\Users\1004646\Anaconda3\lib\site-packages\flask\ctx.py", line 351, in match_request
+    result = self.url_adapter.match(return_rule=True)  # type: ignore
+  File "C:\Users\1004646\Anaconda3\lib\site-packages\werkzeug\routing\map.py", line 624, in match
+    raise NotFound() from None
+werkzeug.exceptions.NotFound: 404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+
+[2023-Feb-22 19:13] 127.0.0.1 POST http /api? 200 OK
+[2023-Feb-22 19:15] 127.0.0.1 POST http /api? 200 OK
+[2023-Feb-22 19:16] 127.0.0.1 POST http /api/? 5xx INTERNAL SERVER ERROR
+404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+[2023-Feb-22 19:31] 127.0.0.1 POST http /api? 200 OK <Response 14 bytes [200 OK]>
+[2023-Feb-22 19:40] 127.0.0.1 POST http /api? ERROR MESSAGE
+api() missing 1 required positional argument: 'output'
+[2023-Feb-22 19:40] 127.0.0.1 POST http /api? ERROR MESSAGE
+500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+[2023-Feb-22 19:42] 127.0.0.1 POST http /api? ERROR MESSAGE
+api() missing 1 required positional argument: 'output'
+[2023-Feb-22 19:43] 127.0.0.1 POST http /api? ERROR MESSAGE
+api() missing 1 required positional argument: 'output'
+[2023-Feb-22 19:43] 127.0.0.1 POST http /api? ERROR MESSAGE
+'tuple' object has no attribute 'add'
+[2023-Feb-22 19:44] 127.0.0.1 POST http /api? ERROR MESSAGE
+500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+[2023-Feb-22 19:45] 127.0.0.1 POST http /api? 200 OK ['manoj']
+[2023-Feb-22 19:54] 127.0.0.1 POST http /api? 200 OK [] ['manoj']
+[2023-Feb-22 19:55] 127.0.0.1 POST http /api? ERROR MESSAGE
+'builtin_function_or_method' object is not subscriptable
+[2023-Feb-22 19:58] 127.0.0.1 POST http /api? 200 OK {'name': 'manoj', 'age': '1'} {'output_name': 'manoj'}
+[2023-Feb-22 19:59] 127.0.0.1 POST http /api? 200 OK {'name': None, 'age': '1'} {'output_name': None}
+[2023-Feb-22 20:00] 127.0.0.1 POST http /api1? ERROR MESSAGE
+404 Not Found: The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.
+[2023-Feb-22 20:03] 127.0.0.1 POST http /api? 200 OK {'name': 'manoj', 'age': '1'} {'output_name': 'manoj'}
+[2023-Feb-22 20:03] 127.0.0.1 POST http /api? ERROR MESSAGE
+'>' not supported between instances of 'str' and 'int'
+[2023-Feb-22 20:04] 127.0.0.1 POST http /api? 200 OK {'name': 'manoj', 'age': '1'} {'output_name': 'no'}
